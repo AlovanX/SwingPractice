@@ -428,7 +428,7 @@ public class MainWin extends javax.swing.JFrame {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         leerDireccion();
-    
+        //Pez
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     public void leerDireccion(){
