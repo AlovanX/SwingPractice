@@ -330,11 +330,11 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="Panel2" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
                       <Component id="Panel3" alignment="1" max="32767" attributes="0"/>
                       <Component id="btComentarios" alignment="0" max="32767" attributes="0"/>
                       <Component id="jToggleButton1" max="32767" attributes="0"/>
                       <Component id="btEditorPane" max="32767" attributes="0"/>
+                      <Component id="Panel2" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
