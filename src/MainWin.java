@@ -1,9 +1,9 @@
 
 import java.awt.Color;
-import java.awt.image.ColorModel;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JColorChooser;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import jdk.nashorn.internal.ir.BreakNode;
@@ -45,9 +45,7 @@ public class MainWin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         caracter = new javax.swing.JLabel();
         MenuEmergente = new javax.swing.JPopupMenu();
-        Gris = new javax.swing.JMenuItem();
-        Azul = new javax.swing.JMenuItem();
-        Verde = new javax.swing.JMenuItem();
+        Color = new javax.swing.JMenuItem();
         ventanaEditorPane = new javax.swing.JDialog();
         jScrollPane2 = new javax.swing.JScrollPane();
         areaPagina = new javax.swing.JEditorPane();
@@ -153,35 +151,10 @@ public class MainWin extends javax.swing.JFrame {
 
         MenuEmergente.setLabel("Selecciona el color de la interface");
 
-        Gris.setMnemonic('G');
-        Gris.setText("Gris");
-        Gris.setToolTipText("Cambia el color de la interface a gris");
-        Gris.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GrisActionPerformed(evt);
-            }
-        });
-        MenuEmergente.add(Gris);
-
-        Azul.setMnemonic('A');
-        Azul.setText("Azul");
-        Azul.setToolTipText("Cambia el color de la interface a azul");
-        Azul.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AzulActionPerformed(evt);
-            }
-        });
-        MenuEmergente.add(Azul);
-
-        Verde.setMnemonic('V');
-        Verde.setText("Verde");
-        Verde.setToolTipText("Cambia el color de la interface a verde");
-        Verde.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VerdeActionPerformed(evt);
-            }
-        });
-        MenuEmergente.add(Verde);
+        Color.setMnemonic('G');
+        Color.setText("Cambiar color de interface");
+        Color.setToolTipText("");
+        MenuEmergente.add(Color);
 
         ventanaEditorPane.setTitle("PaginaWeb");
         ventanaEditorPane.setAlwaysOnTop(true);
@@ -380,18 +353,6 @@ public class MainWin extends javax.swing.JFrame {
                
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void GrisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GrisActionPerformed
-        cambiaColor("Gris");
-    }//GEN-LAST:event_GrisActionPerformed
-
-    private void AzulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AzulActionPerformed
-        cambiaColor("Azul");
-    }//GEN-LAST:event_AzulActionPerformed
-
-    private void VerdeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VerdeActionPerformed
-        cambiaColor("Verde");
-    }//GEN-LAST:event_VerdeActionPerformed
-
     private void itmLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmLimpiarActionPerformed
         JOptionPane.showMessageDialog(this, "Se ha limpiado la información de la ventana");
         rbSeleccion.clearSelection();
@@ -451,18 +412,7 @@ public class MainWin extends javax.swing.JFrame {
             Logger.getLogger(MainWin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public void cambiaColor(String color){
-        switch(color){
-            case "Gris": Panel1.setBackground(Color.GRAY);
-            break;
-            case "Azul": Panel1.setBackground(Color.BLUE);;
-            break;
-            case "Verde": Panel1.setBackground(Color.GREEN);;
-            break;
-        
-        }
-    }
-    
+       
     
     /**
      * @param args the command line arguments
@@ -500,14 +450,12 @@ public class MainWin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem Azul;
-    private javax.swing.JMenuItem Gris;
+    private javax.swing.JMenuItem Color;
     private javax.swing.JPopupMenu MenuEmergente;
     private javax.swing.JPanel Panel1;
     private javax.swing.JPanel Panel2;
     private javax.swing.JPanel Panel3;
     private javax.swing.JDialog Ventana;
-    private javax.swing.JMenuItem Verde;
     private javax.swing.JEditorPane areaPagina;
     private javax.swing.JButton btComentarios;
     private javax.swing.JButton btEditorPane;

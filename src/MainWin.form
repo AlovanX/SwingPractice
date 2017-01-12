@@ -150,35 +150,12 @@
         <Property name="useNullLayout" type="boolean" value="true"/>
       </Layout>
       <SubComponents>
-        <MenuItem class="javax.swing.JMenuItem" name="Gris">
+        <MenuItem class="javax.swing.JMenuItem" name="Color">
           <Properties>
             <Property name="mnemonic" type="int" value="71"/>
-            <Property name="text" type="java.lang.String" value="Gris"/>
-            <Property name="toolTipText" type="java.lang.String" value="Cambia el color de la interface a gris"/>
+            <Property name="text" type="java.lang.String" value="Cambiar color de interface"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GrisActionPerformed"/>
-          </Events>
-        </MenuItem>
-        <MenuItem class="javax.swing.JMenuItem" name="Azul">
-          <Properties>
-            <Property name="mnemonic" type="int" value="65"/>
-            <Property name="text" type="java.lang.String" value="Azul"/>
-            <Property name="toolTipText" type="java.lang.String" value="Cambia el color de la interface a azul"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AzulActionPerformed"/>
-          </Events>
-        </MenuItem>
-        <MenuItem class="javax.swing.JMenuItem" name="Verde">
-          <Properties>
-            <Property name="mnemonic" type="int" value="86"/>
-            <Property name="text" type="java.lang.String" value="Verde"/>
-            <Property name="toolTipText" type="java.lang.String" value="Cambia el color de la interface a verde"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VerdeActionPerformed"/>
-          </Events>
         </MenuItem>
       </SubComponents>
     </Container>
