@@ -263,6 +263,11 @@ public class MainWin extends javax.swing.JFrame {
 
         seleccionEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jalisco", "Monterrey", "México", "Baja California Sur" }));
         seleccionEstado.setToolTipText("");
+        seleccionEstado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seleccionEstadoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Panel3Layout = new javax.swing.GroupLayout(Panel3);
         Panel3.setLayout(Panel3Layout);
@@ -430,6 +435,10 @@ public class MainWin extends javax.swing.JFrame {
         leerDireccion();
         //Pez
     }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void seleccionEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionEstadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seleccionEstadoActionPerformed
 
     public void leerDireccion(){
         try {
