@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import java.awt.image.ColorModel;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -45,7 +46,7 @@ public class MainWin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         caracter = new javax.swing.JLabel();
         MenuEmergente = new javax.swing.JPopupMenu();
-        Color = new javax.swing.JMenuItem();
+        jitmColor = new javax.swing.JMenuItem();
         ventanaEditorPane = new javax.swing.JDialog();
         jScrollPane2 = new javax.swing.JScrollPane();
         areaPagina = new javax.swing.JEditorPane();
@@ -151,10 +152,13 @@ public class MainWin extends javax.swing.JFrame {
 
         MenuEmergente.setLabel("Selecciona el color de la interface");
 
-        Color.setMnemonic('G');
-        Color.setText("Cambiar color de interface");
-        Color.setToolTipText("");
-        MenuEmergente.add(Color);
+        jitmColor.setText("Cambiar color de interface");
+        jitmColor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jitmColorActionPerformed(evt);
+            }
+        });
+        MenuEmergente.add(jitmColor);
 
         ventanaEditorPane.setTitle("PaginaWeb");
         ventanaEditorPane.setAlwaysOnTop(true);
@@ -401,6 +405,12 @@ public class MainWin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_seleccionEstadoActionPerformed
 
+    private void jitmColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jitmColorActionPerformed
+        Color color = JColorChooser.showDialog(this, "Cambiar color de interface", Color.yellow);
+        Panel1.setBackground(color);
+            
+    }//GEN-LAST:event_jitmColorActionPerformed
+
     public void leerDireccion(){
         try {
             if(url.getText().startsWith("http://"))
@@ -412,7 +422,8 @@ public class MainWin extends javax.swing.JFrame {
             Logger.getLogger(MainWin.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-       
+    
+    
     
     /**
      * @param args the command line arguments
@@ -450,7 +461,6 @@ public class MainWin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem Color;
     private javax.swing.JPopupMenu MenuEmergente;
     private javax.swing.JPanel Panel1;
     private javax.swing.JPanel Panel2;
@@ -472,6 +482,7 @@ public class MainWin extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JMenuItem jitmColor;
     private javax.swing.JMenu menuArchivo;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.ButtonGroup rbSeleccion;
