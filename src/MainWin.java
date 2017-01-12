@@ -239,6 +239,7 @@ public class MainWin extends javax.swing.JFrame {
         Panel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), "Estado"));
 
         seleccionEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jalisco", "Monterrey", "México", "Baja California Sur" }));
+        seleccionEstado.setSelectedIndex(-1);
         seleccionEstado.setToolTipText("");
         seleccionEstado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -366,7 +367,17 @@ public class MainWin extends javax.swing.JFrame {
     }//GEN-LAST:event_itmLimpiarActionPerformed
 
     private void itmGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmGuardarActionPerformed
-        JOptionPane.showMessageDialog(this, "La información se ha guardado exitosamente");
+        if(rbSeleccion.getSelection()!=null && seleccionEstado.getSelectedIndex()!=-1){
+            String genero = null;
+            if(btMasculino.isSelected())
+                genero = "Masculino";
+            else if (btFemenino.isSelected())
+                genero = "Femenino";
+            
+            String estado = String.valueOf(seleccionEstado.getSelectedItem());
+            JOptionPane.showMessageDialog(this, "Se guardo la siguiente informacion;\nSexo: "+genero+"\nEstado: "+estado);
+        }
+        
     }//GEN-LAST:event_itmGuardarActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
